@@ -1,4 +1,4 @@
-
+{/*
 import { useState, useRef, useEffect } from "react";
 
 const ACCEPTED = "image/*,.pdf,.txt,.csv,.json,.html,.md";
@@ -169,12 +169,12 @@ export default function InputBox({ onSend, loading, heroMode = false }) {
     </div>
   );
 }
+*/}
 
 
 
 
 
-{/*
 import { useState, useRef, useEffect, useCallback } from "react";
 import Cropper from "cropperjs";
 import "cropperjs/dist/cropper.css";
@@ -829,4 +829,3 @@ function IconBtn({ children, onClick, title, active, danger }) {
     </button>
   );
 }
-*/}
