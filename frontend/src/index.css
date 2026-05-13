@@ -1,0 +1,80 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}
+
+input, textarea, select {
+  font-size: 16px !important;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #c4d0f0; border-radius: 10px; }
+
+.prose {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+.prose p { margin: 0 0 0.55em; }
+.prose p:last-child { margin-bottom: 0; }
+.prose pre {
+  background: rgba(0,0,0,0.045);
+  border-radius: 10px;
+  padding: 12px 14px;
+  overflow-x: auto;
+  font-size: 0.81em;
+  margin: 0.6em 0;
+}
+.prose code {
+  background: rgba(59,91,219,0.09);
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-size: 0.83em;
+  color: #3b5bdb;
+}
+.prose pre code { background: transparent; padding: 0; color: inherit; }
+.prose ul, .prose ol { margin: 0.4em 0 0.4em 1.4em; }
+.prose li { margin: 0.2em 0; }
+.prose h1,.prose h2,.prose h3 { font-weight:700; margin: 0.7em 0 0.3em; }
+.prose a { color: #3b5bdb; text-decoration: underline; }
+.prose strong { font-weight: 600; }
+
+.prose-user * { color: white !important; }
+.prose-user code { background: rgba(255,255,255,0.18) !important; color: white !important; }
+.prose-user a { color: rgba(255,255,255,0.85) !important; }
+
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(20px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity:0; }
+  to   { opacity:1; }
+}
+@keyframes msgIn {
+  from { opacity:0; transform:translateY(8px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+@keyframes bounceTyping {
+  0%,80%,100% { transform:translateY(0); opacity:0.4; }
+  40%         { transform:translateY(-6px); opacity:1; }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+} 
