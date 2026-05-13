@@ -1,4 +1,4 @@
-{/*
+
 import { useState, useRef, useEffect } from "react";
 
 const ACCEPTED = "image/*,.pdf,.txt,.csv,.json,.html,.md";
@@ -169,9 +169,12 @@ export default function InputBox({ onSend, loading, heroMode = false }) {
     </div>
   );
 }
-  */}
 
 
+
+
+
+{/*
 import { useState, useRef, useEffect, useCallback } from "react";
 import Cropper from "cropperjs";
 import "cropperjs/dist/cropper.css";
@@ -309,7 +312,7 @@ function CropperModal({ imageSrc, onConfirm, onCancel }) {
       display: "flex", flexDirection: "column",
       alignItems: "center",
     }}>
-      {/* Header */}
+      
       <div style={{
         width: "100%", maxWidth: 600, flexShrink: 0,
         display: "flex", alignItems: "center", justifyContent: "space-between",
@@ -326,7 +329,7 @@ function CropperModal({ imageSrc, onConfirm, onCancel }) {
         </div>
       </div>
 
-      {/* Instruction */}
+      
       <p style={{
         color: "rgba(180,200,255,0.75)", fontSize: 12, margin: "0 0 10px",
         textAlign: "center", padding: "0 16px",
@@ -334,12 +337,12 @@ function CropperModal({ imageSrc, onConfirm, onCancel }) {
         Drag the corners to crop to the document edges, then tap Use Photo
       </p>
 
-      {/* Cropper image container */}
+      
       <div style={{
         flex: 1, width: "100%", maxWidth: 600,
         overflow: "hidden", position: "relative",
       }}>
-        {/* CropperJS needs the img to be directly in the DOM */}
+        
         <img
           ref={imgRef}
           src={imageSrc}
@@ -352,7 +355,7 @@ function CropperModal({ imageSrc, onConfirm, onCancel }) {
         />
       </div>
 
-      {/* Confirm button */}
+      
       <div style={{
         width: "100%", maxWidth: 600, padding: "14px 16px",
         paddingBottom: "max(14px, env(safe-area-inset-bottom))",
@@ -628,7 +631,7 @@ export default function InputBox({ onSend, loading, heroMode }) {
 
   return (
     <>
-      {/* CropperJS modal — shown after camera capture */}
+      
       {cropperSrc && (
         <CropperModal
           imageSrc={cropperSrc}
@@ -645,7 +648,7 @@ export default function InputBox({ onSend, loading, heroMode }) {
         borderTop: heroMode ? "none" : "1px solid rgba(59,91,219,0.08)",
       }}>
 
-        {/* Attachment thumbnails */}
+        
         {attachments.length > 0 && (
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 10 }}>
             {attachments.map((a, i) => (
@@ -690,7 +693,7 @@ export default function InputBox({ onSend, loading, heroMode }) {
           </div>
         )}
 
-        {/* Input row */}
+       
         <div style={{
           display: "flex", alignItems: "flex-end", gap: 6,
           background: "rgba(255,255,255,0.97)",
@@ -700,14 +703,14 @@ export default function InputBox({ onSend, loading, heroMode }) {
           boxShadow: "0 2px 16px rgba(59,91,219,0.08)",
         }}>
 
-          {/* Hidden inputs */}
+          
           <input
             ref={fileInputRef} type="file" multiple
             accept="image/*,.pdf,.txt,.xlsx,.xls,.doc,.docx"
             style={{ display: "none" }}
             onChange={e => { handleFiles(e.target.files); e.target.value = ""; }}
           />
-          {/* Camera — rear facing, image only */}
+          
           <input
             ref={scanInputRef} type="file"
             accept="image/*" capture="environment"
@@ -715,7 +718,7 @@ export default function InputBox({ onSend, loading, heroMode }) {
             onChange={handleScanCapture}
           />
 
-          {/* Attach */}
+          
           <IconBtn title="Attach file" onClick={() => fileInputRef.current?.click()}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -723,7 +726,7 @@ export default function InputBox({ onSend, loading, heroMode }) {
             </svg>
           </IconBtn>
 
-          {/* Scan — mobile only */}
+          
           {mobile && (
             <IconBtn title="Scan document" onClick={() => scanInputRef.current?.click()}>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none"
@@ -734,7 +737,7 @@ export default function InputBox({ onSend, loading, heroMode }) {
             </IconBtn>
           )}
 
-          {/* Textarea */}
+          
           <textarea
             ref={textareaRef}
             value={text}
@@ -756,7 +759,7 @@ export default function InputBox({ onSend, loading, heroMode }) {
             }}
           />
 
-          {/* Voice */}
+          
           <IconBtn
             title={recording ? "Stop" : "Voice input"}
             onClick={recording ? stopRecording : startRecording}
@@ -777,7 +780,7 @@ export default function InputBox({ onSend, loading, heroMode }) {
             )}
           </IconBtn>
 
-          {/* Send */}
+          
           <button
             onClick={handleSend} disabled={!canSend}
             style={{
@@ -826,3 +829,4 @@ function IconBtn({ children, onClick, title, active, danger }) {
     </button>
   );
 }
+*/}
