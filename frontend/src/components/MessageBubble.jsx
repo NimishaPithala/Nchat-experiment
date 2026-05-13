@@ -2,7 +2,7 @@ import ReactMarkdown  from "react-markdown";
 import remarkMath     from "remark-math";
 import rehypeKatex    from "rehype-katex";
 import remarkGfm      from "remark-gfm";
-import DynamicWidget, { parseAIBlocks } from "./DynamicWidget";
+import DynamicWidget, { parseAIBlocks } from "./DiagramWidget";
 import DiagramWidget from "./DiagramWidget";
 
 // Detect if the message is asking for a diagram
